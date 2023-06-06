@@ -11,7 +11,7 @@ const wss = new WebSocketServer({ server });
 var lastBrewed = new Date();
 
 wss.on("connection", async (client) => {
-  client.send(lastBrewed.getHours() + ":" + lastBrewed.getMinutes());
+  client.send((lastBrewed.getHours() - 4) + ":" + lastBrewed.getMinutes());
   client.addEventListener("message", (message) => {
     if (message.data === "brew") {
       lastBrewed = new Date();
