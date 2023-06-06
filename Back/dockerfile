@@ -1,0 +1,8 @@
+FROM node:alpine
+WORKDIR /app
+COPY package.json ./
+COPY backend.js ./
+RUN npm i
+RUN ls -a
+EXPOSE 8080
+CMD ["node", "backend.js"]

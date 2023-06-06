@@ -3,10 +3,7 @@ var http = require("http");
 const PORT = 8080;
 
 var server = http
-  .createServer([], (req, res) => {
-    res.writeHead(200);
-    res.end("hello world\n");
-  })
+  .createServer()
   .listen(PORT);
 
 const wss = new WebSocketServer({ server });

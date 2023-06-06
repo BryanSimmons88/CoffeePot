@@ -5,7 +5,7 @@ import useWebSocket from "react-use-websocket";
 
 function App() {
   const [time, setTime] = useState('')
-  const { sendMessage } = useWebSocket("ws://localhost:8080", {
+  const { sendMessage } = useWebSocket("ws://10.30.12.70:8080", {
     onOpen: () => sendMessage("user 1"),
     onMessage: (m) => {
       console.log(m)
