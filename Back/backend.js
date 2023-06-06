@@ -16,7 +16,7 @@ wss.on("connection", async (client) => {
     if (message.data === "brew") {
       lastBrewed = new Date();
       wss.clients.forEach((client) => {
-        client.send(lastBrewed.getHours() + ":" + lastBrewed.getMinutes())
+        client.send((lastBrewed.getHours() - 4) + ":" + lastBrewed.getMinutes())
       })
     }
   });
