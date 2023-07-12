@@ -28,6 +28,7 @@ function App() {
           I just brewed a fresh pot
         </button>
       </div>
+      <h2>View this page at http://10.30.14.110/ </h2>
     </>
   )
 }
