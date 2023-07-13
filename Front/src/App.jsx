@@ -5,7 +5,7 @@ import useWebSocket from "react-use-websocket";
 
 function App() {
   const [time, setTime] = useState('')
-  const { sendMessage } = useWebSocket("ws://10.30.14.110:8080", {
+  const { sendMessage } = useWebSocket(`ws://${import.meta.env.VITE_BACKEND_ADDRESS}:8080`, {
     onOpen: () => sendMessage("user 1"),
     onMessage: (m) => {
       console.log(m)
@@ -28,7 +28,7 @@ function App() {
           I just brewed a fresh pot
         </button>
       </div>
-      <h1>View this page at http://10.30.14.110/ </h1>
+      <h1>{`View this page at ${import.meta.env.VITE_BACKEND_ADDRESS}`}</h1>
     </>
   )
 }
