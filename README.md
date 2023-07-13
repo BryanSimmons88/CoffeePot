@@ -9,7 +9,7 @@ Before the frontend could be run the environment varialbe needs to be set. Creat
 
 VITE_BACKEND_ADDRESS=127.0.0.1
 
-# Run Frontend
+## Run Frontend
 cd Front/
 npm install
 npm run dev
