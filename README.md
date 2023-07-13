@@ -9,15 +9,19 @@ Before the frontend could be run the environment varialbe needs to be set. Creat
 
 VITE_BACKEND_ADDRESS=127.0.0.1
 
-### Run Frontend
+### Running Frontend
+```
 cd Front/
 npm install
 npm run dev
+```
 
 ## Backend - Node.js
 No environment variables are needed for the backend.
 
-### Run Backend
+### Running Backend
+```
 cd Back/
 npm install
 node backend.js
+```
