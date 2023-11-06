@@ -12,12 +12,12 @@ const wss = new WebSocketServer({ server });
 var lastBrewed = new Date();
 
 wss.on("connection", async (client) => {
-  client.send(moment(lastBrewed).format('M/DD H:MM'));
+  client.send(moment(lastBrewed).format('M/DD H:mm'));
   client.addEventListener("message", (message) => {
     if (message.data === "brew") {
       lastBrewed = new Date();
       wss.clients.forEach((client) => {
-        client.send(moment(lastBrewed).format('M/DD H:MM'))
+        client.send(moment(lastBrewed).format('M/DD H:mm'))
       })
     }
   });
